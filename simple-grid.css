@@ -27,7 +27,7 @@ body {
   margin: 1em;
   margin-bottom: 0.5em;
   border-radius: 0.5em;
-  width: 20em;
+  width: 15em;
   text-align: center;
   font-family: cursive;
 }
@@ -49,7 +49,12 @@ body {
 .Contact_us {
   background-color:#FFCDB2;
   text-align: center;
-  width:auto;
+  width: auto;
+  padding: -0.5em;
+}
+
+.footer {
+  font-family: cursive;
 }
 
 /* ROOT FONT STYLES */

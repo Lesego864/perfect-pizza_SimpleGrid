@@ -29,24 +29,20 @@ body {
   border-radius: 0.5em;
   width: 15em;
   text-align: center;
-  font-family: cursive;
 }
 .Medium_pizza {
   background-color: #E5989B;
   height: 23em;
-  font-family: cursive;
 }
 
 .Large_pizza {
   background-color: #B5838D;
   height: 23em;
-  font-family: cursive;
 }
 
 .Small_pizza {
   background-color: #FFB4A2;
   height: 23em;
-  font-family: cursive;
 }
 
 .Contact_us {
@@ -57,14 +53,11 @@ body {
   margin-bottom: -2em;
 }
 
-.footer {
-  font-family: cursive;
-}
 
 /* ROOT FONT STYLES */
 
 * {
-  font-family: 'Lato', Helvetica, sans-serif;
+  font-family: cursive;
   color: #333447;
   line-height: 1.5;
 }

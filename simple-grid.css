@@ -33,25 +33,33 @@ body {
 .Medium_pizza {
   background-color: #E5989B;
   height: 23em;
+  box-shadow: 5px 10px 20px #56CFE1
 }
 
 .Large_pizza {
   background-color: #B5838D;
   height: 23em;
+  box-shadow: 5px 10px 20px #56CFE1
 }
 
 .Small_pizza {
   background-color: #FFB4A2;
   height: 23em;
+  box-shadow: 5px 10px 20px #56CFE1
 }
 
 .Contact_us {
   background-color:#FFCDB2;
   text-align: center;
   width: auto;
-  padding: -0.5em;
+  padding: 0.1em;
   margin-bottom: -2em;
-  margin-right: -0.7em;
+  margin-right: 0.8em;
+}
+@media (min-width: 375px) {
+  .pizza {
+    width: auto;
+  }
 }
 
 

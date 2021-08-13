@@ -20,6 +20,18 @@ body {
   text-align: center;
   font-size:medium;
 }
+.cart {
+  border: 0.1px solid #B5838D;
+  background-color: transparent;
+  text-align: center;
+  width: auto;
+  padding-top: -2em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  margin-right: 0.9em;
+  margin-left: 1em;
+  border-radius: 0.5em;
+}
 
 .pizza {
   border: 2.5px solid gainsboro;
@@ -32,20 +44,48 @@ body {
 }
 .Medium_pizza {
   background-color: #E5989B;
-  height: 23em;
+  height: 25em;
   box-shadow: 5px 10px 20px #56CFE1
 }
 
 .Large_pizza {
   background-color: #B5838D;
-  height: 23em;
+  height: 25em;
   box-shadow: 5px 10px 20px #56CFE1
 }
 
 .Small_pizza {
   background-color: #FFB4A2;
-  height: 23em;
+  height: 25em;
   box-shadow: 5px 10px 20px #56CFE1
+}
+.line {
+  margin-bottom: 2.7em;
+}
+.line2 {
+  margin-bottom: 0.7em;
+}
+table {
+  text-align: center;
+  margin: auto;
+}
+button {
+  border-radius: 1.5em;
+  background-color: transparent;
+  /*color: #C1D3FE;*/
+  font-weight:lighter;
+  border-color: #979DAC;
+}
+button:hover {
+  cursor: pointer;
+  box-shadow: 5px 10px 20px #56CFE1;
+  text-decoration: turquoise;
+}
+.message {
+  border-radius: 1.5em;
+}
+.checkbtn {
+  margin-bottom: 1em;
 }
 
 .Contact_us {
@@ -55,6 +95,9 @@ body {
   padding: 0.1em;
   margin-bottom: -2em;
   margin-right: 0.8em;
+}
+.footer {
+  padding-top: 1em;
 }
 @media (min-width: 375px) {
   .pizza {

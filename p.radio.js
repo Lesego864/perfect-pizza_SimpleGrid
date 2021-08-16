@@ -11,8 +11,15 @@ const totalAmountElement = document.querySelector(".full_amount");
 const q1Element = document.querySelector(".Q1");
 const q2Element = document.querySelector(".Q2");
 const q3Element = document.querySelector(".Q3");
+const b1Element = document.querySelector(".buy_one")
 const checkElement = document.querySelector(".checkbtn");
-const messageElement = document.querySelector(".themessage");
+const paymentElement = document.querySelector(".payment");
+const messageElement = document.querySelector(".message");
+const menuElement = document.querySelector(".menu");
+const buy1Element = document.querySelector(".buy_one");
+const buy2Element = document.querySelector(".buy_two");
+const buy3Element = document.querySelector(".buy_three");
+
 
 
 
@@ -36,6 +43,7 @@ sMinbuttonElement.addEventListener('click', smallPizzaSubCost);
 function smallPizzaSubCost() {
     smallPizzaTotal -= 49.25;
     totalCost -= 49.25;
+    quantity = b1Element.innerHTML;
     if (smallPizzaTotal < 0) {
         smallPizzaTotal += 49.25;
         totalCost += 49.25;
@@ -99,9 +107,23 @@ function largePizzaSubCost() {
 };
 checkElement.addEventListener('click', checkOutButton);
 function checkOutButton() {
-    messageElement.innerHTML = checkElement.value
+
+    if (totalCost > paymentElement.value) {
+        messageElement.innerHTML = "Insufficient Funds!";
+    } else if (totalCost < paymentElement.value) {
+        messageElement.innerHTML = "Thank You For Your Support!";
+    }
+};
+buy1Element.addEventListener('click', lekkerbutton1);
+function lekkerbutton1() {
+    menuElement.classList.remove("hide");
+};
+buy2Element.addEventListener('click', lekkerbutton2);
+function lekkerbutton2() {
+    menuElement.classList.remove("hide");
+};
+buy3Element.addEventListener('click', lekkerbutton3);
+function lekkerbutton3() {
+    menuElement.classList.remove("hide");
 }
 
-/*sAddbuttonElement.addEventListener("click", function() {
-    alert(value)
-})*/

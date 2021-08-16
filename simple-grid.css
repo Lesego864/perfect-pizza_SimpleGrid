@@ -20,6 +20,9 @@ body {
   text-align: center;
   font-size:medium;
 }
+.hide {
+  display: none;
+}
 .cart {
   border: 0.1px solid #B5838D;
   background-color: transparent;

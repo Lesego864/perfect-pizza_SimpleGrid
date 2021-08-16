@@ -11,6 +11,8 @@ const totalAmountElement = document.querySelector(".full_amount");
 const q1Element = document.querySelector(".Q1");
 const q2Element = document.querySelector(".Q2");
 const q3Element = document.querySelector(".Q3");
+const checkElement = document.querySelector(".checkbtn");
+const messageElement = document.querySelector(".themessage");
 
 
 
@@ -22,50 +24,52 @@ var quantity = 0;
 
 sAddbuttonElement.addEventListener('click', smallPizzaAddCost);
 function smallPizzaAddCost() {
-    smallPizzaTotal += 49.50;
-    totalCost += 49.50;
-    q1Element.innerHTML = smallPizzaTotal / 49.50;
-    priceTagElement.innerHTML = smallPizzaTotal.toFixed(2);
-    totalAmountElement.innerHTML = totalCost.toFixed(2);
+    smallPizzaTotal += 49.25;
+    totalCost += 49.25;
+    q1Element.innerHTML = smallPizzaTotal / 49.25;
+    priceTagElement.innerHTML = "R" +smallPizzaTotal.toFixed(2);
+    totalAmountElement.innerHTML = "R" + totalCost.toFixed(2);
 
 
 };
 sMinbuttonElement.addEventListener('click', smallPizzaSubCost);
 function smallPizzaSubCost() {
-    smallPizzaTotal -= 49.50;
-    totalCost -= 49.50;
-    q1Element.innerHTML = smallPizzaTotal * 49.50;
-    priceTagElement.innerHTML = smallPizzaTotal.toFixed(2);
-    totalAmountElement.innerHTML = totalCost.toFixed(2);
+    smallPizzaTotal -= 49.25;
+    totalCost -= 49.25;
     if (smallPizzaTotal < 0) {
-        smallPizzaTotal += 49.50;
-        totalCost += 49.50;
+        smallPizzaTotal += 49.25;
+        totalCost += 49.25;
+        q1Element.innerHTML = 0;
         return;
     };
+    q1Element.innerHTML = smallPizzaTotal / 49.25;
+    priceTagElement.innerHTML = "R" + smallPizzaTotal.toFixed(2);
+    totalAmountElement.innerHTML = "R" + totalCost.toFixed(2);
 
     
 };
 
 mAddbuttonElement.addEventListener('click', mediumPizzaAddCost);
 function mediumPizzaAddCost() {
-    mediumPizzaTotal += 89.50;
-    totalCost += 89.50;
-    q2Element.innerHTML = mediumPizzaTotal / 89.50;
-    randsElement.innerHTML = mediumPizzaTotal.toFixed(2);
-    totalAmountElement.innerHTML = totalCost.toFixed(2);
+    mediumPizzaTotal += 89.75;
+    totalCost += 89.75;
+    q2Element.innerHTML = mediumPizzaTotal / 89.75;
+    randsElement.innerHTML = "R" + mediumPizzaTotal.toFixed(2);
+    totalAmountElement.innerHTML = "R" + totalCost.toFixed(2);
 };
 mMinbuttonElement.addEventListener('click', mediumPizzaSubCost);
 function mediumPizzaSubCost() {
-    mediumPizzaTotal -= 89.45;
-    totalCost -= 89.45;
-    q2Element.innerHTML = smallPizzaTotal * 89.50;
-    randsElement.innerHTML = mediumPizzaTotal.toFixed(2);
-    totalAmountElement.innerHTML = totalCost.toFixed(2);
+    mediumPizzaTotal -= + 89.75;
+    totalCost -= 89.75;
     if (mediumPizzaTotal < 0) {
-        mediumPizzaTotal += 89.50;
-        totalCost += 89.50;
+        mediumPizzaTotal += 89.75;
+        totalCost += 89.75;
+        q2Element.innerHTML = 0;
         return;
     };
+    q2Element.innerHTML = mediumPizzaTotal / 89.75;
+    randsElement.innerHTML = "R" + mediumPizzaTotal.toFixed(2);
+    totalAmountElement.innerHTML = "R" + totalCost.toFixed(2);
 
     
 };
@@ -75,26 +79,28 @@ function largePizzaAddCost() {
     largePizzaTotal += 129.50;
     totalCost += 129.50;
     q3Element.innerHTML = largePizzaTotal / 129.50;
-    moneyDueElement.innerHTML = largePizzaTotal.toFixed(2);
-    totalAmountElement.innerHTML = totalCost.toFixed(2);
+    moneyDueElement.innerHTML = "R" + largePizzaTotal.toFixed(2);
+    totalAmountElement.innerHTML = "R" + totalCost.toFixed(2);
 
 };
 lMinbuttonElement.addEventListener('click', largePizzaSubCost);
 function largePizzaSubCost() {
     largePizzaTotal -= 129.50;
     totalCost -= 129.50;
-    q3Element.innerHTML = largePizzaTotal * 129.50;
-    moneyDueElement.innerHTML = largePizzaTotal.toFixed(2);
-    totalAmountElement.innerHTML = totalCost.toFixed(2);
     if (largePizzaTotal < 0) {
         largePizzaTotal += 129.50;
         totalCost += 129.50;
+        q3Element.innerHTML = 0;
         return;
     };
-
-
-    
+    q3Element.innerHTML = largePizzaTotal / 129.50;
+    moneyDueElement.innerHTML = "R" + largePizzaTotal.toFixed(2);
+    totalAmountElement.innerHTML = "R" + totalCost.toFixed(2); 
 };
+checkElement.addEventListener('click', checkOutButton);
+function checkOutButton() {
+    messageElement.innerHTML = checkElement.value
+}
 
 /*sAddbuttonElement.addEventListener("click", function() {
     alert(value)

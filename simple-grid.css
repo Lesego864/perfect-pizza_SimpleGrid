@@ -19,6 +19,7 @@ body {
   background-color:#6D6875;
   text-align: center;
   font-size:medium;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .hide {
   display: none;
@@ -34,6 +35,13 @@ body {
   margin-right: 0.9em;
   margin-left: 1em;
   border-radius: 0.5em;
+}
+.message {
+  color: #56CFE1;
+  margin-top: 1em;
+  font-weight: bold;
+  font-size:larger;
+
 }
 
 .pizza {
@@ -88,7 +96,10 @@ button:hover {
   border-radius: 1.5em;
 }
 .checkbtn {
-  margin-bottom: 1em;
+  margin-top: 1em;
+}
+.the_amount_paid {
+  margin-top: 1em;
 }
 
 .Contact_us {

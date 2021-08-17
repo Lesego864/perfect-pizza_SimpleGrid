@@ -96,9 +96,12 @@ button:hover {
   border-radius: 1.5em;
 }
 .checkbtn {
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 .the_amount_paid {
+  margin-top: 1em;
+}
+.pay_up {
   margin-top: 1em;
 }
 

@@ -30,6 +30,7 @@ var mediumPizzaTotal = 0;
 var largePizzaTotal = 0;
 var totalCost = 0;
 var quantity = 0;
+let timeoutID;
 
 sAddbuttonElement.addEventListener('click', smallPizzaAddCost);
 function smallPizzaAddCost() {
@@ -115,6 +116,10 @@ cashElement.addEventListener('click', payButton);
 function payButton() {
     if (totalCost > paymentElement.value) {
         messageElement.innerHTML = "Sorry - That was not enough money!";
+        setTimeout(function(){
+            messageElement.classList.remove(".hidden")
+            , 3000}
+        );
     } else if (totalCost < paymentElement.value) {
         messageElement.innerHTML = "Enjoy your pizzas!";
     }
@@ -122,32 +127,50 @@ function payButton() {
 buy1Element.addEventListener('click', lekkerbutton1);
 function lekkerbutton1() {
     menuElement.classList.remove("hide");
-    smallPizzaTotal = 49.25;
+    smallPizzaTotal += 49.25;
     totalCost += 49.25;
     q1Element.innerHTML = smallPizzaTotal / 49.25;
-    priceTagElement.innerHTML = "R" + smallPizzaTotal;
-    totalAmountElement.innerHTML = "R" + totalCost;
+    priceTagElement.innerHTML = "R" + smallPizzaTotal.toFixed(2);
+    totalAmountElement.innerHTML = "R" + totalCost.toFixed(2);
 };
 buy2Element.addEventListener('click', lekkerbutton2);
 function lekkerbutton2() {
     menuElement.classList.remove("hide");
-    mediumPizzaTotal = 89.75;
+    mediumPizzaTotal += 89.75;
     totalCost += 89.75
     q2Element.innerHTML = mediumPizzaTotal / 89.75;
-    randsElement.innerHTML = "R" + mediumPizzaTotal;
-    totalAmountElement.innerHTML = "R" + totalCost;
+    randsElement.innerHTML = "R" + mediumPizzaTotal.toFixed(2);
+    totalAmountElement.innerHTML = "R" + totalCost.toFixed(2);
 
 };
 buy3Element.addEventListener('click', lekkerbutton3);
 function lekkerbutton3() {
     menuElement.classList.remove("hide");
-    largePizzaTotal = 129.50;
+    largePizzaTotal += 129.50;
     totalCost += 129.50;
     q3Element.innerHTML = largePizzaTotal / 129.50;
-    moneyDueElement.innerHTML = "R" + largePizzaTotal;
-    totalAmountElement.innerHTML = "R" + totalCost;
+    moneyDueElement.innerHTML = "R" + largePizzaTotal.toFixed(2);
+    totalAmountElement.innerHTML = "R" + totalCost.toFixed(2);
     
+};
+
+/*setTimeout (cashElement() {
+    alert("");}, 3000);
 
 
+/*function delayTimer() {
+    /*timeoutID = setTimeout(messageElement.innerHTML, 3000);
+};
+  
+function payment() {
+    alert("");
 }
+function payBtnClick() {
+
+// the logic for the pay btn click
+ 
+setTimeout(function(){
+element.classList.remove('.hidden')
+,3000}
+)*/
 

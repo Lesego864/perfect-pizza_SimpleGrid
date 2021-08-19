@@ -11,7 +11,6 @@ const totalAmountElement = document.querySelector(".full_amount");
 const q1Element = document.querySelector(".Q1");
 const q2Element = document.querySelector(".Q2");
 const q3Element = document.querySelector(".Q3");
-const b1Element = document.querySelector(".buy_one")
 const checkElement = document.querySelector(".checkbtn");
 const amountElement = document.querySelector(".the_amount_paid");
 const paymentElement = document.querySelector(".payment");
@@ -20,7 +19,7 @@ const menuElement = document.querySelector(".menu");
 const buy1Element = document.querySelector(".buy_one");
 const buy2Element = document.querySelector(".buy_two");
 const buy3Element = document.querySelector(".buy_three");
-const cashElement = document.querySelector(".cash")
+const cashElement = document.querySelector(".cash");
 
 
 
@@ -116,13 +115,14 @@ cashElement.addEventListener('click', payButton);
 function payButton() {
     if (totalCost > paymentElement.value) {
         messageElement.innerHTML = "Sorry - That was not enough money!";
-        setTimeout(function(){
-            messageElement.classList.remove(".hidden")
-            , 3000}
-        );
+
+            setTimeout(function(){
+            messageElement.classList.remove("hide")
+        }, 3000);
     } else if (totalCost < paymentElement.value) {
         messageElement.innerHTML = "Enjoy your pizzas!";
     }
+
 };
 buy1Element.addEventListener('click', lekkerbutton1);
 function lekkerbutton1() {
@@ -173,4 +173,6 @@ setTimeout(function(){
 element.classList.remove('.hidden')
 ,3000}
 )*/
-
+/*setTimeout(function() {
+    messageElement.innerHTML = "";
+}, 3000);*/

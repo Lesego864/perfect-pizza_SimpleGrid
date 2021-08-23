@@ -110,12 +110,12 @@ function largePizzaSubCost() {
 checkElement.addEventListener('click', checkOutButton);
 function checkOutButton() {
     amountElement.classList.remove("hide");
+    cashElement.classList.remove("hide")
 };
 cashElement.addEventListener('click', payButton);
 function payButton() {
     if (totalCost > paymentElement.value) {
         messageElement.innerHTML = "Sorry - That was not enough money!";
-
             setTimeout(function(){
             messageElement.classList.remove("hide")
         }, 3000);

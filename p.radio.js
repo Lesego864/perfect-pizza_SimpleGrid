@@ -29,7 +29,8 @@ var mediumPizzaTotal = 0;
 var largePizzaTotal = 0;
 var totalCost = 0;
 var quantity = 0;
-let timeoutID;
+var change = 0;
+/*let timeoutID;*/
 
 sAddbuttonElement.addEventListener('click', smallPizzaAddCost);
 function smallPizzaAddCost() {
@@ -45,7 +46,6 @@ sMinbuttonElement.addEventListener('click', smallPizzaSubCost);
 function smallPizzaSubCost() {
     smallPizzaTotal -= 49.25;
     totalCost -= 49.25;
-    quantity = b1Element.innerHTML;
     if (smallPizzaTotal < 0) {
         smallPizzaTotal += 49.25;
         totalCost += 49.25;
@@ -120,7 +120,16 @@ function payButton() {
             messageElement.classList.remove("hide")
         }, 3000);
     } else if (totalCost < paymentElement.value) {
+		ChangeDue = paymentElement.value - totalCost;
+        messageElement.innerHTML = "Enjoy your pizzas, change due is R" + ChangeDue.toFixed(2);
+		setTimeout(function(){
+            messageElement.classList.remove("hide")
+        }, 3000);
+    } else if (totalCost = paymentElement.value) {
         messageElement.innerHTML = "Enjoy your pizzas!";
+        setTimeout(function(){
+            messageElement.classList.remove("hide")
+        }, 3000);
     }
 
 };

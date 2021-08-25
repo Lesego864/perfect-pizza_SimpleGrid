@@ -118,21 +118,35 @@ function payButton() {
         messageElement.innerHTML = "Sorry - That was not enough money!";
             setTimeout(function(){
             messageElement.classList.remove("hide")
-        }, 3000);
+        }, 1000);
+        hideMessage();
+
     } else if (totalCost < paymentElement.value) {
 		ChangeDue = paymentElement.value - totalCost;
         messageElement.innerHTML = "Enjoy your pizzas, change due is R" + ChangeDue.toFixed(2);
 		setTimeout(function(){
             messageElement.classList.remove("hide")
-        }, 3000);
+        }, 1000);
+        hideMessage();
+
     } else if (totalCost = paymentElement.value) {
         messageElement.innerHTML = "Enjoy your pizzas!";
         setTimeout(function(){
             messageElement.classList.remove("hide")
-        }, 3000);
+        }, 1000);
     }
+    hideMessage();
 
 };
+function hideMessage() {
+    setTimeout(function() {
+        messageElement.classList.add("hide")   
+    }, 3000);
+    setTimeout(function() {
+        menuElement.classList.add("hide")   
+    }, 3000);
+
+}
 buy1Element.addEventListener('click', lekkerbutton1);
 function lekkerbutton1() {
     menuElement.classList.remove("hide");

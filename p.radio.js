@@ -55,7 +55,6 @@ function smallPizzaSubCost() {
     q1Element.innerHTML = smallPizzaTotal / 49.25;
     priceTagElement.innerHTML = "R" + smallPizzaTotal.toFixed(2);
     totalAmountElement.innerHTML = "R" + totalCost.toFixed(2);
-
     
 };
 
@@ -119,6 +118,9 @@ function payButton() {
             setTimeout(function(){
             messageElement.classList.remove("hide")
         }, 1000);
+        setTimeout(function(){
+            window.location.reload();
+        }, 3000);
         hideMessage();
 
     } else if (totalCost < paymentElement.value) {
@@ -127,6 +129,9 @@ function payButton() {
 		setTimeout(function(){
             messageElement.classList.remove("hide")
         }, 1000);
+        setTimeout(function(){
+            window.location.reload();
+        }, 3000);
         hideMessage();
 
     } else if (totalCost = paymentElement.value) {
@@ -134,6 +139,9 @@ function payButton() {
         setTimeout(function(){
             messageElement.classList.remove("hide")
         }, 1000);
+        setTimeout(function(){
+            window.location.reload();
+        }, 3000);
     }
     hideMessage();
 
@@ -177,25 +185,3 @@ function lekkerbutton3() {
     
 };
 
-/*setTimeout (cashElement() {
-    alert("");}, 3000);
-
-
-/*function delayTimer() {
-    /*timeoutID = setTimeout(messageElement.innerHTML, 3000);
-};
-  
-function payment() {
-    alert("");
-}
-function payBtnClick() {
-
-// the logic for the pay btn click
- 
-setTimeout(function(){
-element.classList.remove('.hidden')
-,3000}
-)*/
-/*setTimeout(function() {
-    messageElement.innerHTML = "";
-}, 3000);*/
